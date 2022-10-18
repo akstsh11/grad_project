@@ -1,0 +1,145 @@
+動かして学ぶ AI・機械学習の基礎（オライリー・ジャパン）
+
+
+第 16回  Pyrhon勉強会
+===================
+2022/8/25(木)	10:30 AM ～ 12:00 PM
+================
+〇 実施内容：
+動かして学ぶ AI・機械学習の基礎（オライリー・ジャパン）
+----------------------
+9章 シーケンスと時系列データの理解
+9.2：時系列を予測する技術 pp.165-170
+下記のコードを使用した
+コード：chapter9--> naive-forecast.ipynb
+-----------
+下記のコードは使用しなかった
+コード：chapter9-->simple-examples.ipynb
+コード：chapter9-->timeseries.ipynb
+【実装確認済み】
+米田君作成：9.opynb
+古池君作成：9.ipynb
+----
+10章　シーケンスを予測するモデルの作成
+10.1 ウィンドウデータセットの作成 pp.172-173
+コード：chapter10-->basic_windowed_dataset.ipynb
+【実装確認済み】
+米田君作成：10.ipynb
+古池君作成：10_basic_windowed_dataset.ipynb
+-----
+ウィンドウ版の時系列データセット作成 pp.174-175
+10.2  シーケンスデータに適合するDNNの作成と学習 pp.176-179
+10.3 DNNの結果評価
+------
+下記のコードを使用した
+コード：chapter10-->windowed_timeseries.ipynb
+【実装確認済み】
+米田君作成：10.ipynb
+古池君作成：10_windowed_timeseries.ipynb
+-----
+下記のコード入力なし
+!pip install keras-tuner
+from kerastuner.tuners import RandomSearch
+----------------
+下記のコードは使用しなかった
+コード：chapter10-->tuned_timeseries.ipynb
+下記のコード入力あり
+!pip install keras-tuner
+from kerastuner.tuners import RandomSearch
+-----
+本書のコードにダウンロード先：
+https://github.com/lmoroney/tfbook
+
+
+第 17回  Pyrhon勉強会
+===================
+トピック: 第 17 回  Pyrhon勉強会
+================
+〇 実施内容：
+動かして学ぶ AI・機械学習の基礎（オライリー・ジャパン）
+----------------------
+11章  畳み込みと回帰によるシーケンスモデルの構築
+--------
+11.1
+● シーケンスデータの畳み込み
+======
+● 畳み込みのコード化  pp.190-192
+cnn_timeseries.ipynb
+--＞ M2 米田君 実行ファイルを参照のこと
+=====
+使用先が未確認
+bidi-gru_timeseries-withdropout.ipynb
+gru_timeseries-withdropout.ipynb
+=====
+● ConvIDハイパーパラメータに対する実験  pp.193-195
+tuned_cnn_timeseries.ipynb
+--＞ M2 米田君 実行ファイルを参照のこと
+--------
+11.2
+● NASA気象データ
+● PythonへのGISSデータの読み込み pp.195-198
+使用ファイル
+bidilstm_timeseries.ipynb
+station.csv (NASA気象データをダウンロードしたもの)
+epoch = 100
+======
+gru_timeseries.ipynb
+station.csv (NASA気象データをダウンロードしたもの)
+epoch = 1000
+--------
+本書のコードのダウンロード先：
+https://github.com/lmoroney/tfbook
+=======
+NASA気象データをダウンロード先：
+NASAゴダード宇宙科学研究所(GISS) が提供する
+気象に関する優れた時系列データ
+station.csv のダウンロード先
+https://data.giss.nasa.gov/gistemp/station_data_v4_globe/
+の右側にある「Station Data」リンクをクリック
+--> 対象とする観測箇所を選択可能
+-->本書では，シアトルのタコマ空港 (Seattle Tacoma Intl Ap) を選択
+
+
+===================
+第 18 回  Pyrhon勉強会
+===================
+〇 実施内容：
+動かして学ぶ AI・機械学習の基礎（オライリー・ジャパン）
+----------------------
+11章  畳み込みと回帰によるシーケンスモデルの構築
+====
+11.3
+● シーケンスモデルにRNNを使用する  pp.199-201
+SimpleRNN
+lstm_timeseries.ipynb
+-->米田君の実行確認 OK
+● より大きなデータセットの調査 pp.201-204
+climexp_timeseries.ipynb
+tdaily_cet.dat.txt
+-->米田君の実行確認 OK
+--------
+11.4
+●  その他の回帰型層
+SimpleRNN
+lstm_timeseries.ipynb
+を使用して
+GRUに変更
+-->米田君の実行確認 OK
+LSTM に変更
+-->米田君の実行確認 OK
+-------
+11.5
+● ドロップアウトの使用
+gru_timeseries_withdropout.ipynb
+-->米田君の実行確認 OK
+--------
+11.6
+● 双方向RNNの使用
+bidi_gru_timeseries_withdropout.ipynb
+--> 各自実行しておく
+------
+11.7
+● まとめ
+--------
+本書のコードにダウンロード先：
+https://github.com/lmoroney/tfbook （編集済み） 
